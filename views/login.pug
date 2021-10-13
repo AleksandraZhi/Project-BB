@@ -1,0 +1,15 @@
+extends base.pug
+
+block content
+    .login-form 
+        h2 Sign in 
+        form.form(action='/login' method='POST')
+            .form__items 
+                label.form-label(for='username') User name
+                input#username.form-input(name='username' type='username', placeholder='name@email.com', required)
+            .form__items 
+                label.form-label(for='password') Password
+                input#password.form-input(name='password' type='password', placeholder='********', required,)
+            .form__items 
+                button.btn.form-btn(type='submit') Sign in
+            

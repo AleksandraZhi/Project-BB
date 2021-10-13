@@ -1,0 +1,20 @@
+extends base 
+
+block content
+    .policy-form 
+        h2 Welcome #{holdersName}
+        h2 Your policy summary:
+        .policy-container
+            .policy-container-item.reference 
+                label.policy-label Policy reference
+                p #{policyReference}
+            .policy-container-item.cover-type 
+                label.policy-label Cover type
+                p #{coverType}
+            .policy-container-item.car 
+                label.policy-label Car
+                p #{car}
+            .policy-container-item.address
+                label.policy-label Address
+                each val in addressArray
+                    p=val
